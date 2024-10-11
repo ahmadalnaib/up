@@ -16,6 +16,6 @@ Route::get('/', function () {
 
 
 
-Route::get('/dashboard',DashboardController::class)
+Route::get('/dashboard/{site?}',DashboardController::class)
 ->middleware(['auth','verified'])
 ->name('dashboard');

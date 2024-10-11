@@ -10,10 +10,11 @@ class DashboardController extends Controller
 {
     //
 
-    public function __invoke()
+    public function __invoke(Request $request,Site $site)
     {
         return Inertia::render('Dashboard',[
-            'site'=> Site::find(1)
+            'site'=> $site,
+            'sites'=> Site::get()
         ]);
     }
 }
