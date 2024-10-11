@@ -6,7 +6,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 
 defineProps({
     site: Object,
-    sites: Array
+    sites: Object
 })
 </script>
 
@@ -18,7 +18,7 @@ defineProps({
                    Dashboard
                </h2>
                <div>
-                <SiteSelector :sites="sites" />
+                <SiteSelector :sites="sites.data" />
                </div>
 
            </div>

@@ -30,7 +30,7 @@ defineProps({
         <template #popper> 
           <ul class="space-y-1">
             <li v-for="site in sites" :key="site.id">
-              <Link href="/dashboard/1" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+              <Link :href="`/dashboard/${site.id}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
                 {{ site.domain }}
               </Link>
             </li>
