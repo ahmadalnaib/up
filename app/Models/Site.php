@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Site;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -15,6 +16,8 @@ class Site extends Model
         'domain',
         'default',
     ];
+
+
 
 
     public function user()
