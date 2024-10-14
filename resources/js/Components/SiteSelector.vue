@@ -31,7 +31,7 @@ const showNewSiteModal = ref(false)
             </svg>
         </button>
 
-        <template #popper> 
+        <template #popper="{hide}"> 
           <ul class="space-y-1">
             <li v-for="site in sites" :key="site.id">
               <Link :href="`/dashboard/${site.id}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
@@ -41,7 +41,7 @@ const showNewSiteModal = ref(false)
            
 
             <li>
-              <button @click="showNewSiteModal=true" class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-indigo-500 font-bold text-sm">Add a site </button>
+              <button @click="showNewSiteModal=true; hide()" class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-indigo-500 font-bold text-sm">Add a site </button>
             </li>
 
 
