@@ -15,7 +15,7 @@ defineProps({
         <template #header>
            <div class="flex items-center justify-between">
                <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                   Dashboard
+                   {{ site.data.domain }}
                </h2>
                <div>
                 <SiteSelector :sites="sites.data" />
